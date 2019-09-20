@@ -1,3 +1,13 @@
+##run this script with root or sudo user
+
+#!/bin/bash
+
+if [ $UID -ne 0 ]
+then
+        echo "please run with root or sudo user"
+        exit 1
+fi
+
 # if they don't supply at least one argument, give them help.
 if [ $# -lt 1 ]
 then
