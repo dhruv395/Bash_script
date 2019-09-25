@@ -58,6 +58,22 @@ echo "first arg: $1"
 echo second arg: $2
 echo "third arg: $3"
 
+#inspect OPTIND
+echo "optind: $OPTIND"
+
+#remove the options while leaving the remaining arguments
+shift "$(( OPTIND - 1 ))"
+
+echo after the shift:
+echo "all args: $@"
+echo "first arg: $1"
+echo second arg: $2
+echo "third arg: $3"
+
+if [ $# -gt 0 ]
+then 
+	usage
+fi
 
 log 'generating a password'
 
