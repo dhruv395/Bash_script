@@ -14,3 +14,12 @@
 -u filename - Check if file set-user-id bit is set
 -w filename - Check if file is writable
 -x filename - Check if file is executable
+
+#######################################################################################################
+usage of $#, $@ & $?: Bash Built-in variables
+
+*You passed 3 parameters(1,2,3) to your script.*
+
+$# = number of arguments. Answer is 3
+$@ = what parameters were passed. Answer is 1 2 3
+$? = was last command successful. Answer is 0 which means 'yes'
